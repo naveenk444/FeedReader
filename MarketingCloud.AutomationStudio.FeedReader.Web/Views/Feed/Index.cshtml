@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MarketingCloud.AutomationStudio.FeedReader.Web.Models.FeedViewModel>
+@{
+    ViewBag.Title = "Feed";
+}
+
+<h2>Feeds from Twitter</h2>
+
+<div class="col-md-offset-6 col-md-6">
+    <p class="pull-right">
+        <b>Filter</b> <input type="text" id="contentFilter"/>
+    </p>
+</div>
+
+<table class="table table-striped table-hover" id="tblFeeds">
+    <thead>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.UserName)</th>
+        <th>@Html.DisplayNameFor(model => model.UserScreenName)</th>
+        <th>@Html.DisplayNameFor(model => model.UserProfileImageUrl)</th>
+        <th>@Html.DisplayNameFor(model => model.Content)</th>
+        <th>@Html.DisplayNameFor(model => model.RetweetCount)</th>
+        <th>@Html.DisplayNameFor(model => model.PostedDate)</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.UserName</td>
+            <td>@item.UserScreenName</td>
+            <td><img src="@Url.Content(@item.UserProfileImageUrl)" alt="Image"/></td>
+            @if (string.IsNullOrEmpty(item.MediaImageUrl))
+            {
+                <td class="col">@item.Content</td>
+            }
+            else
+            {
+                <td class="col">@item.Content<br /><img src="@Url.Content(@item.MediaImageUrl)" style="width: 75% !important;" alt="Image" /></td>
+            }
+            <td>@item.RetweetCount</td>
+            <td>@item.PostedDate</td>
+        </tr>
+    }
+    </tbody>
+</table>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#contentFilter").bind('input',function() {
+            $("tr").show();
+            if ($("#contentFilter").val() !== '') {
+                $(".col").filter(function () {
+                    return $(this).text().toLowerCase().indexOf($("#contentFilter").val().toLowerCase()) === -1;
+                }).parent().hide();
+            }
+            
+        });
+    });
+
+</script>
+

@@ -1,0 +1,10 @@
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.dll.config
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.dll
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.pdb
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\MarketingCloud.AutomationStudio.FeedReader.Core.dll
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\MarketingCloud.AutomationStudio.FeedReader.Core.pdb
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.csprojResolveAssemblyReference.cache
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.dll
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.pdb

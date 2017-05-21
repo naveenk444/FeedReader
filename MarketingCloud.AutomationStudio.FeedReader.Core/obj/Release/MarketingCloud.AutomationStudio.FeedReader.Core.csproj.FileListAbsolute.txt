@@ -1,0 +1,6 @@
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Core\bin\Release\MarketingCloud.AutomationStudio.FeedReader.Core.dll.config
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Core\bin\Release\MarketingCloud.AutomationStudio.FeedReader.Core.dll
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Core\bin\Release\MarketingCloud.AutomationStudio.FeedReader.Core.pdb
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Core\obj\Release\MarketingCloud.AutomationStudio.FeedReader.Core.csprojResolveAssemblyReference.cache
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Core\obj\Release\MarketingCloud.AutomationStudio.FeedReader.Core.dll
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Core\obj\Release\MarketingCloud.AutomationStudio.FeedReader.Core.pdb

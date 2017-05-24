@@ -7,20 +7,35 @@ using System.Linq;
 using System.Globalization;
 using System.IO;
 using System.Net;
+using log4net;
 
 namespace MarketingCloud.AutomationStudio.FeedReader.Core.Services
 {
     public class FeedService : Interfaces.IFeedService
     {
+        private static readonly ILog logger = LogManager.GetLogger(typeof(FeedService));
         public IEnumerable<Entities.Feed> GetFeeds(int noOfFeeds, string strUserName)
         {
-            if(ValidateConfigurationEntries())
+            try
             {
-                return GetTwitterFeeds(noOfFeeds, strUserName);
+                log4net.Config.XmlConfigurator.Configure();
+                if (ValidateConfigurationEntries())
+                {
+                    logger.Debug("GetFeeds method has been called");
+                    return GetTwitterFeeds(noOfFeeds, strUserName);
+                }
+                else
+                {
+                    string strError = "Some of the configuration entries required for the application are missing.Please check them and try again";
+                    logger.Error(strError);
+                    throw new Exception(strError);
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                throw new Exception("Some of the configuration entries required for the application are missing. Please check them and try again");
+                logger.Error(ex.Message,ex);
+                throw;
             }
         }
         public IEnumerable<Entities.Feed> GetTwitterFeeds(int noOfFeeds, string strUserName)
@@ -51,7 +66,7 @@ namespace MarketingCloud.AutomationStudio.FeedReader.Core.Services
             {
                 return null;
             }
-
+            logger.Debug("Feeds have been retrieved successfully");
             return feedsJson.Cast<Dictionary<string, object>>().Select(feed =>
              {
                  var user = ((Dictionary<string, object>)feed["user"]);
@@ -118,25 +133,12 @@ namespace MarketingCloud.AutomationStudio.FeedReader.Core.Services
                     JavaScriptSerializer serializer = new JavaScriptSerializer();
                     var json = streamReader.ReadToEnd();
                     dynamic item = serializer.Deserialize<object>(json);
+                    logger.Debug("Access Token has been retrieved successfully");
                     return item["access_token"];
                 }
             }
 
-            //using (var httpClient = new HttpClient())
-            //{
-            //    var request = new HttpRequestMessage(HttpMethod.Post, tokenUrl);
-            //    var apiCredentials = Convert.ToBase64String(new UTF8Encoding().GetBytes(oAuthConsumerKey + ":" + oAuthConsumerSecret));
-            //    request.Headers.Add("Authorization", "Basic " + apiCredentials);
-            //    request.Content = new StringContent("grant_type=client_credentials", Encoding.UTF8, "application/x-www-form-urlencoded");
-
-            //    HttpResponseMessage response = await httpClient.SendAsync(request).ConfigureAwait(false);
-
-
-            //    string json = response.Content.ReadAsStringAsync().Result;
-            //    var serializer = new JavaScriptSerializer();
-            //    dynamic item = serializer.Deserialize<object>(json);
-            //    return item["access_token"];
-            //}
+         
         }
 
         public bool ValidateConfigurationEntries()

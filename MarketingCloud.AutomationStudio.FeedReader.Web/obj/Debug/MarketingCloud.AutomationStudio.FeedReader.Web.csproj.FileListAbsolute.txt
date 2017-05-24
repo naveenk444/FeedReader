@@ -53,3 +53,4 @@ D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Web\obj\Debug\
 D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Web\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Web.pdb
 D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Web\bin\MarketingCloud.AutomationStudio.FeedReader.Core.dll
 D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Web\bin\MarketingCloud.AutomationStudio.FeedReader.Core.pdb
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Web\bin\log4net.dll

@@ -8,3 +8,4 @@ D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debu
 D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.csprojResolveAssemblyReference.cache
 D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.dll
 D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\obj\Debug\MarketingCloud.AutomationStudio.FeedReader.Tests.pdb
+D:\Projects\FeedReader\MarketingCloud.AutomationStudio.FeedReader.Tests\bin\Debug\log4net.dll
